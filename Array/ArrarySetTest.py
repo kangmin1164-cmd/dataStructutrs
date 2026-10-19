@@ -41,3 +41,83 @@ print("c1:",c1)
 print("c2:",c2)
 print("c3:",c3)
 '''
+
+print()
+print("========== 도전 문제 ==========")
+
+
+# ==================================================
+# 도전 문제 1 : equals()
+# ==================================================
+
+A = ArraySet()
+
+A.insert(3)
+A.insert(5)
+A.insert(1)
+
+
+B = ArraySet()
+
+B.insert(1)
+B.insert(3)
+B.insert(5)
+
+
+C = ArraySet()
+
+C.insert(1)
+C.insert(3)
+
+
+print()
+print("[문제 1 : equals()]")
+
+print("A =", A)
+print("B =", B)
+print("C =", C)
+
+# A와 B는 원소의 순서는 다르지만
+# {1, 3, 5}로 같은 집합이므로 True
+print("A.equals(B) =", A.equals(B))
+
+# C에는 5가 없기 때문에 False
+print("A.equals(C) =", A.equals(C))
+
+
+# ==================================================
+# 도전 문제 2 : __eq__()
+# ==================================================
+
+print()
+print("[문제 2 : == 연산자]")
+
+# __eq__()를 구현했기 때문에
+# A.equals(B)가 아니라 A == B 형태로 비교 가능
+
+print("A == B :", A == B)
+print("A == C :", A == C)
+
+
+# ==================================================
+# 도전 문제 3 : isSubsetOf()
+# ==================================================
+
+print()
+print("[문제 3 : isSubsetOf()]")
+
+# C = {1, 3}
+# A = {3, 5, 1}
+#
+# C의 모든 원소가 A에 존재하므로
+# C는 A의 부분집합
+print("C.isSubsetOf(A) =", C.isSubsetOf(A))
+
+
+# A에는 5가 있지만 C에는 5가 없기 때문에
+# A는 C의 부분집합이 아님
+print("A.isSubsetOf(C) =", A.isSubsetOf(C))
+
+
+# 같은 집합 역시 자기 자신의 부분집합
+print("A.isSubsetOf(B) =", A.isSubsetOf(B))

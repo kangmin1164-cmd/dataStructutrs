@@ -1,4 +1,4 @@
-from Array.ArrayList import ArrayList
+from ArrayList import ArrayList
 
 L = ArrayList(50)
     

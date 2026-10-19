@@ -52,5 +52,22 @@ class ArraySet:
                 setC.insert(self.array[i])
         return setC
 
+    def equals(self, setB):
+        if self.size != setB.size:
+            return False
+        for i in range(self.size):
+            if not setB.contains(self.array[i]):
+                return False
+        return True
+
+    def __eq__(self, setB):
+        return self.equals(setB)
+
+    def isSubsetOf(self, setB):
+        for i in range(self.size):
+            if not setB.contains(self.array[i]):
+                return False
+        return True
+
     def __str__(self):
         return str(self.array[0:self.size])
